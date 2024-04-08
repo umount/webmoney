@@ -17,18 +17,18 @@ describe "interfaces url" do
 
   it "should prepare url to classic version" do
     # classic version
-    wmc.interfaces[:balance].to_s.should == 'https://w3s.wmtransfer.com/asp/XMLPurses.asp'
+    wmc.interfaces[:balance].to_s.should == 'https://w10s.wmtransfer.com/asp/XMLPurses.asp'
     # non-converted
-    wmc.interfaces[:get_passport].to_s.should == 'https://passport.webmoney.ru/asp/XMLGetWMPassport.asp'
-    wmc.interfaces[:check_user].to_s.should == 'https://apipassport.webmoney.ru/XMLCheckUser.aspx'
+    wmc.interfaces[:get_passport].to_s.should == 'https://passport.web.money/asp/XMLGetWMPassport.asp'
+    wmc.interfaces[:check_user].to_s.should == 'https://apipassport.web.money/XMLCheckUser.aspx'
   end
 
   it "should prepare url to x509 version" do
     # converted
-    wml.interfaces[:balance].to_s.should == 'https://w3s.wmtransfer.com/asp/XMLPursesCert.asp'
-    wml.interfaces[:check_user].to_s.should == 'https://apipassport.webmoney.ru/XMLCheckUserCert.aspx'
+    wml.interfaces[:balance].to_s.should == 'https://w10s.wmtransfer.com/asp/XMLPursesCert.asp'
+    wml.interfaces[:check_user].to_s.should == 'https://apipassport.web.money/XMLCheckUserCert.aspx'
     # non-converted
-    wml.interfaces[:transaction_get].to_s.should == 'https://merchant.webmoney.ru/conf/xml/XMLTransGet.asp'
+    wml.interfaces[:transaction_get].to_s.should == 'https://merchant.web.money/conf/xml/XMLTransGet.asp'
   end
 
 end

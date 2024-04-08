@@ -13,7 +13,7 @@ module Webmoney
       :find_wm            => { :url => 'XMLFindWMPurse.asp' },   # x8
       :balance            => { :url => 'XMLPurses.asp' },        # x9
       :incoming_invoices  => { :url => 'XMLInInvoices.asp' },    # x10
-      :get_passport       => { :url => 'https://passport.webmoney.ru/asp/XMLGetWMPassport.asp' , # x11
+      :get_passport       => { :url => 'https://passport.web.money/asp/XMLGetWMPassport.asp' , # x11
                                :x509 => lambda {|url| url.sub(/\.asp$/, 'Cert.asp')} },
       :reject_protection  => { :url => 'XMLRejectProtect.asp' }, # x13
       :transaction_moneyback => { :url => 'XMLTransMoneyback.asp' }, # x14
@@ -21,13 +21,13 @@ module Webmoney
       :trust_me           => { :url => 'XMLTrustList2.asp' },    # x15
       :trust_save         => { :url => 'XMLTrustSave2.asp' },    # x15
       :create_purse       => { :url => 'XMLCreatePurse.asp' },   # x16
-      :create_contract    => { :url => 'https://arbitrage.webmoney.ru/xml/X17_CreateContract.aspx', },  # x17
-      :get_contract_info  => { :url => 'https://arbitrage.webmoney.ru/xml/X17_GetContractInfo.aspx' }, # x17
-      :transaction_get    => { :url => 'https://merchant.webmoney.ru/conf/xml/XMLTransGet.asp' },      # x18
-      :check_user         => { :url => 'https://apipassport.webmoney.ru/XMLCheckUser.aspx',            # x19
+      :create_contract    => { :url => 'https://arbitrage.web.money/xml/X17_CreateContract.aspx', },  # x17
+      :get_contract_info  => { :url => 'https://arbitrage.web.money/xml/X17_GetContractInfo.aspx' }, # x17
+      :transaction_get    => { :url => 'https://merchant.web.money/conf/xml/XMLTransGet.asp' },      # x18
+      :check_user         => { :url => 'https://apipassport.web.money/XMLCheckUser.aspx',            # x19
                                :x509 => lambda {|url| 'https://apipassportcrt.webmoney.ru/XMLCheckUserCert.aspx' } },
       :bussines_level     => { :url => 'https://stats.wmtransfer.com/levels/XMLWMIDLevel.aspx' },
-      :login              => { :url => 'https://login.wmtransfer.com/ws/authorize.xiface' },           # login
+      :login              => { :url => 'https://login.web.money/ws/authorize.xiface' },           # login
     }
   end
 
