@@ -36,7 +36,7 @@ module Webmoney
 
   # Preset for W3S
   def w3s_url
-    'https://w3s.webmoney.com/asp/'
+    'https://w10s.web.money/asp/'
   end
 
   # Required options:
